@@ -1,20 +1,43 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Calculadora Simple</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Número 1</ion-label>
+    <ion-input type="number" [(ngModel)]="num1"></ion-input>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item class="ion-margin-top">
+    <ion-label position="stacked">Número 2</ion-label>
+    <ion-input type="number" [(ngModel)]="num2"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" class="ion-margin-top" (click)="calculate('sum')">
+    Sumar
+  </ion-button>
+
+  <ion-button expand="block" fill="outline" (click)="calculate('sub')">
+    Restar
+  </ion-button>
+
+  <ion-button expand="block" fill="outline" (click)="calculate('times')">
+    Multiplicar
+  </ion-button>
+
+  <ion-button expand="block" fill="outline" (click)="calculate('div')">
+    Dividir
+  </ion-button>
+
+
+  <ion-card *ngIf="operation" class="ion-margin-top">
+    <ion-card-header>
+      <ion-card-title>Resultado</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ operation }}: <strong>{{ result }}</strong>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
