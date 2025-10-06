@@ -1,0 +1,7 @@
+{
+  "name": "MiCalculadora",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
