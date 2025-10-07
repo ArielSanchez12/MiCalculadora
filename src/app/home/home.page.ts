@@ -51,5 +51,34 @@ export class HomePage {
       this.result = null;
       this.operation = 'Operación desconocida';
     }
+  } 
+  calculateTrig(op: 'sin' | 'cos' | 'tan') {
+    const angle = Number(this.num1);
+
+    if (isNaN(angle)) {
+      this.result = null;
+      this.operation = 'Error: valor inválido';
+      return;
+    }
+
+    
+    const angleInRadians = angle * (Math.PI / 180); //debo convertir a radianes antes de hacer la operacion porque sin, cos y tan trabajan en radianes
+
+    switch(op) {
+      case 'sin':
+        this.result = Math.sin(angleInRadians);
+        this.operation = 'Seno';
+        break;
+      case 'cos':
+        this.result = Math.cos(angleInRadians);
+        this.operation = 'Coseno';
+        break;
+      case 'tan':
+        this.result = Math.tan(angleInRadians);
+        this.operation = 'Tangente';
+        break;
+    }
   }
 }
+
+

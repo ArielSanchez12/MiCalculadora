@@ -31,6 +31,17 @@
     Dividir
   </ion-button>
 
+  <ion-button expand="block" fill="outline" (click)="calculateTrig('sin')">
+    Seno
+  </ion-button>
+
+  <ion-button expand="block" fill="outline" (click)="calculateTrig('cos')">
+    Coseno
+  </ion-button>
+
+  <ion-button expand="block" fill="outline" (click)="calculateTrig('tan')">
+    Tangente
+  </ion-button>
 
   <ion-card *ngIf="operation" class="ion-margin-top">
     <ion-card-header>
