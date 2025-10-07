@@ -1,4 +1,5 @@
 Ejercicio Login + Calculadora cientifica
+
 Ruta '/login'
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/51317e02-e888-4b6d-a55f-aee5fda7ab45" />
@@ -17,7 +18,7 @@ Si las credenciales son correctas, ingresa a la ruta '/home' donde se podrá rea
 
 
 - Resta
-- 
+  
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/301797d1-1aa1-4f04-b9ac-1e4a40883894" />
 
   
